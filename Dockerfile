@@ -51,11 +51,9 @@ USER nextjs
 EXPOSE 5002
 
 ENV PORT=5002
-# set hostname to localhost
-ENV HOSTNAME="[IP_ADDRESS]"
+# set hostname to 0.0.0.0 to accept traffic from outside the container
+ENV HOSTNAME="0.0.0.0"
 
 # server.js is created by next build from the standalone output
 # https://nextjs.org/docs/pages/api-reference/next-config-js/output
 CMD ["node", "server.js"]
-
-

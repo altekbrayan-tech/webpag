@@ -52,7 +52,7 @@ EXPOSE 3011
 
 ENV PORT=3011
 # set hostname to localhost
-ENV HOSTNAME="0.0.0.0"
+ENV HOSTNAME="192.168.0.174"
 
 # server.js is created by next build from the standalone output
 # https://nextjs.org/docs/pages/api-reference/next-config-js/output

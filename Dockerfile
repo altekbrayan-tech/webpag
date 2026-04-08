@@ -48,11 +48,11 @@ COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
 USER nextjs
 
-EXPOSE 5002
+EXPOSE 9443
 
-ENV PORT=5002
+ENV PORT=9443
 # set hostname to 0.0.0.0 to accept traffic from outside the container
-ENV HOSTNAME="0.0.0.0"
+ENV HOSTNAME="[IP_ADDRESS]"
 
 # server.js is created by next build from the standalone output
 # https://nextjs.org/docs/pages/api-reference/next-config-js/output

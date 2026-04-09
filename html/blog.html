@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog de Tecnología - Clouddec | Tech Blog & IT News</title>
   <link rel="icon" href="../public/logo.png" type="image/png">
-  <meta name="description" content="Lee nuestros últimos artículos sobre la industria IT, desarrollo ágil, ciberseguridad, y migración a la nube (Cloud IT). Tech trends and tutorials.">
-  <meta name="keywords" content="Blog, Tecnología, Tech Blog, Desarrollo de software, Software Development, Ciberseguridad, Cybersecurity, IT News">
+  <meta name="description"
+    content="Lee nuestros últimos artículos sobre la industria IT, desarrollo ágil, ciberseguridad, y migración a la nube (Cloud IT). Tech trends and tutorials.">
+  <meta name="keywords"
+    content="Blog, Tecnología, Tech Blog, Desarrollo de software, Software Development, Ciberseguridad, Cybersecurity, IT News">
   <meta name="author" content="Clouddec">
   <meta property="og:title" content="Blog de Tecnología - Clouddec">
   <meta property="og:description" content="Artículos, metodologías e ideas innovadoras en tecnología.">
@@ -16,6 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
   <!-- Navbar -->
@@ -55,18 +59,19 @@
       <a href="blog.html">Blog</a>
       <a href="cotizacion.html">Cotización</a>
       <a href="contacto.html">Contacto</a>
-      <a href="cotizacion.html" style="color: var(--accent); font-weight: bold; border-bottom: none;">Comenzar Proyecto →</a>
+      <a href="cotizacion.html" style="color: var(--accent); font-weight: bold; border-bottom: none;">Comenzar Proyecto
+        →</a>
     </div>
   </nav>
 
   <script>
     const hamburgerBtn = document.getElementById('hamburgerBtn');
     const mobileMenu = document.getElementById('mobileMenu');
-    if(hamburgerBtn && mobileMenu) {
+    if (hamburgerBtn && mobileMenu) {
       hamburgerBtn.addEventListener('click', () => {
         mobileMenu.classList.toggle('active');
         const icon = hamburgerBtn.querySelector('i');
-        if(mobileMenu.classList.contains('active')) {
+        if (mobileMenu.classList.contains('active')) {
           icon.classList.remove('fa-bars');
           icon.classList.add('fa-xmark');
         } else {
@@ -102,7 +107,8 @@
     <section class="section text-center">
       <div class="container glass-panel" style="padding: 4rem 2rem;">
         <h2 style="margin-bottom: 1rem;">¿Listo para transformar tu negocio?</h2>
-        <p style="margin-bottom: 2rem; max-width: 600px; margin: 0 auto 2rem;">Agenda una consulta gratuita y descubre cómo podemos ayudarte a alcanzar tus objetivos tecnológicos.</p>
+        <p style="margin-bottom: 2rem; max-width: 600px; margin: 0 auto 2rem;">Agenda una consulta gratuita y descubre
+          cómo podemos ayudarte a alcanzar tus objetivos tecnológicos.</p>
         <a href="cotizacion.html" class="btn btn-primary">
           Solicitar Cotización
         </a>
@@ -112,7 +118,7 @@
 
   <script>
     const categories = ['Todos', 'Tecnología', 'Seguridad', 'Cloud', 'Desarrollo', 'Trabajo', 'Negocios'];
-    
+
     // Derived from blog-data.ts
     const blogPosts = [
       {
@@ -185,7 +191,7 @@
       const container = document.getElementById('blogGrid');
       container.innerHTML = '';
       const filtered = filter === 'Todos' ? blogPosts : blogPosts.filter(p => p.category === filter);
-      
+
       filtered.forEach(p => {
         const a = document.createElement('a');
         a.href = '#'; // Originally /blog/${p.slug}
@@ -261,7 +267,8 @@
       </div>
     </div>
 
-    <div class="container flex justify-between items-center footer-bottom" style="border-top: 1px solid var(--border-color); padding-top: 2rem;">
+    <div class="container flex justify-between items-center footer-bottom"
+      style="border-top: 1px solid var(--border-color); padding-top: 2rem;">
       <p style="margin-bottom: 0;">© 2026 Clouddec. Todos los derechos reservados.</p>
       <div class="flex gap-2">
         <a href="privacidad.html" style="color: var(--text-muted); font-size: 0.9rem;">Política de Privacidad</a>
@@ -272,9 +279,11 @@
   </footer>
 
   <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/573013318447?text=Hola%20equipo%20de%20Clouddec,%20estoy%20interesado%20en%20sus%20servicios%20y%20me%20gustaría%20solicitar%20una%20reunión." class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+  <a href="https://wa.me/573019454222?text=Hola%20equipo%20de%20Clouddec,%20estoy%20interesado%20en%20sus%20servicios%20y%20me%20gustaría%20solicitar%20una%20reunión."
+    class="whatsapp-float" target="_blank" rel="noopener noreferrer">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
 </body>
+
 </html>

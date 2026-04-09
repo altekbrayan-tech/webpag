@@ -8,6 +8,6 @@ COPY html /usr/share/nginx/html
 COPY public /usr/share/nginx/html/public
 
 # Exponer el puerto solicitado
-EXPOSE 9443
+EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]

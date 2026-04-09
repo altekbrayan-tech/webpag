@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Clouddec | IT Solutions Contact</title>
+  <link rel="icon" href="../public/logo.png" type="image/png">
+  <meta name="description" content="Contacta a nuestro equipo de expertos en tecnología, desarrollo de software y ciberseguridad para impulsar tu negocio. Contact us today.">
+  <meta name="keywords" content="Contacto, Contact us, Clouddec, Desarrollo de software, Software Development, Consultoría TI, IT Consulting, Ciberseguridad, Cybersecurity">
+  <meta name="author" content="Clouddec">
+  <meta property="og:title" content="Contacto - Clouddec">
+  <meta property="og:description" content="Estamos listos para transformar tus ideas en soluciones tecnológicas.">
+  <meta property="og:type" content="website">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar glass-panel">
+    <div class="flex justify-between items-center">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="logo-container">
+          <img src="../public/logo.png" alt="Clouddec Logo" style="width: 100%; height: 100%; object-fit: contain;">
+        </div>
+        <span class="logo-text">CLOUDDEC</span>
+      </a>
+
+      <div class="desktop-menu flex items-center">
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="portafolio.html">Portafolio</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="cotizacion.html">Cotización</a></li>
+          <li><a href="contacto.html" class="active">Contacto</a></li>
+        </ul>
+      </div>
+
+      <a href="cotizacion.html" class="btn btn-primary">Comenzar Proyecto</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="animate-fade-in" style="padding-top: 2rem;">
+    <section class="container section">
+      <div class="text-center mb-4 text-center">
+        <span class="badge">Soporte y Consultas</span>
+        <h1>Formulario de <span style="color: var(--accent);">Contacto</span></h1>
+        <p style="max-width: 800px; margin: 0 auto; font-size: 1.2rem;">
+          ¿Tienes alguna duda o consulta general? Escríbenos y nuestro equipo te responderá a la brevedad.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4 mt-4">
+        <div class="glass-panel" style="padding: 3rem;">
+          <h3 class="mb-2">Información de Contacto</h3>
+          <p class="mb-4">Si necesitas una respuesta rápida, también puedes comunicarte por estos medios:</p>
+          
+          <div class="flex flex-col gap-3">
+            <div class="flex items-center gap-2">
+              <div style="padding: 0.8rem; background: var(--primary-bg); border-radius: 50%; color: var(--accent); width: 45px; height: 45px; display: flex; align-items: center; justify-content: center;">
+                 ✉️
+              </div>
+              <div>
+                <h4 style="margin: 0; font-size: 1rem;">Email</h4>
+                <p style="margin: 0;">contacto@clouddec.site</p>
+              </div>
+            </div>
+            
+            <div class="flex items-center gap-2">
+              <div style="padding: 0.8rem; background: var(--primary-bg); border-radius: 50%; color: var(--accent); width: 45px; height: 45px; display: flex; align-items: center; justify-content: center;">
+                 📞
+              </div>
+              <div>
+                <h4 style="margin: 0; font-size: 1rem;">Teléfono</h4>
+                <p style="margin: 0;">+57 301 331 8447</p>
+              </div>
+            </div>
+            
+            <div class="flex items-center gap-2">
+              <div style="padding: 0.8rem; background: var(--primary-bg); border-radius: 50%; color: var(--accent); width: 45px; height: 45px; display: flex; align-items: center; justify-content: center;">
+                 📍
+              </div>
+              <div>
+                <h4 style="margin: 0; font-size: 1rem;">Ubicación</h4>
+                <p style="margin: 0;">Colombia, Bogotá D.C.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-panel" style="padding: 3rem;">
+          
+          <div id="successMessage" class="text-center" style="padding: 2rem 0; display: none;">
+             <div style="width: 60px; height: 60px; background: rgba(0, 210, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: var(--accent); font-size: 24px;">
+                ✓
+             </div>
+             <h3>¡Mensaje Enviado!</h3>
+             <p>Nos pondremos en contacto contigo pronto.</p>
+             <button onclick="resetForm()" class="btn btn-outline" style="margin-top: 1rem;">Enviar otro mensaje</button>
+          </div>
+
+          <form id="contactForm" onsubmit="submitForm(event)">
+            <div class="form-group">
+              <label class="form-label">Nombre Completo</label>
+              <input type="text" name="nombre" class="form-input" required placeholder="Ej. Juan Pérez" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Correo Electrónico</label>
+              <input type="email" name="email" class="form-input" required placeholder="juan@empresa.com" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Asunto</label>
+              <input type="text" name="asunto" class="form-input" required placeholder="Consulta general" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Mensaje</label>
+              <textarea class="form-textarea" name="mensaje" required rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+            </div>
+            <div id="errorMessage" style="color: #ff5e62; margin-bottom: 1rem; padding: 1rem; background: rgba(255, 0, 0, 0.1); border-radius: 8px; display: none;">
+              Hubo un error al enviar el formulario. Inténtalo más tarde.
+            </div>
+            <button type="submit" id="submitBtn" class="btn btn-primary" style="width: 100%;">
+              Enviar Mensaje
+            </button>
+          </form>
+          
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    function submitForm(event) {
+      event.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      btn.innerText = 'Enviando...';
+      btn.disabled = true;
+      document.getElementById('errorMessage').style.display = 'none';
+      
+      const formData = new FormData(event.target);
+      const params = new URLSearchParams();
+      formData.forEach((value, key) => {
+         params.append(key, value);
+      });
+
+      const scriptUrl = "https://script.google.com/macros/s/AKfycbxRWmqZc1IZ4Z8hpUQ4n_e7kzqCrYx3hJz8JcFxH2H5KFK-9G9-8k56T4CVnZtrTgdl/exec";
+
+      fetch(scriptUrl, {
+        method: 'POST',
+        body: params,
+        mode: 'no-cors'
+      })
+      .then(() => {
+        document.getElementById('contactForm').style.display = 'none';
+        document.getElementById('successMessage').style.display = 'block';
+      })
+      .catch((err) => {
+         console.error(err);
+         document.getElementById('errorMessage').style.display = 'block';
+         btn.innerText = 'Enviar Mensaje';
+         btn.disabled = false;
+      });
+    }
+
+    function resetForm() {
+      document.getElementById('contactForm').reset();
+      document.getElementById('contactForm').style.display = 'block';
+      document.getElementById('successMessage').style.display = 'none';
+      const btn = document.getElementById('submitBtn');
+      btn.innerText = 'Enviar Mensaje';
+      btn.disabled = false;
+    }
+  </script>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container grid grid-cols-4" style="margin-bottom: 3rem;">
+      <div style="grid-column: span 1;" class="footer-brand">
+        <a href="index.html" class="flex items-center gap-2 mb-2">
+          <div style="position: relative; width: 30px; height: 30px;">
+            <img src="../public/logo.png" alt="Clouddec Logo" style="width: 100%; height: 100%; object-fit: contain;">
+          </div>
+          <span style="font-size: 1.2rem; font-weight: 700;">CLOUDDEC</span>
+        </a>
+        <p>Transformamos ideas en soluciones tecnológicas. Desarrollo de software y soluciones IT para empresas.</p>
+      </div>
+
+      <div>
+        <h4 style="color: var(--text-main); margin-bottom: 1rem;">Servicios</h4>
+        <ul class="flex flex-col gap-1">
+          <li><a href="servicios.html#desarrollo" style="color: var(--text-muted);">Desarrollo de Software</a></li>
+          <li><a href="servicios.html#it" style="color: var(--text-muted);">Soluciones IT</a></li>
+          <li><a href="servicios.html#soporte" style="color: var(--text-muted);">Soporte Técnico</a></li>
+          <li><a href="servicios.html#admin" style="color: var(--text-muted);">Administración de Sistemas</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="color: var(--text-main); margin-bottom: 1rem;">Empresa</h4>
+        <ul class="flex flex-col gap-1">
+          <li><a href="nosotros.html" style="color: var(--text-muted);">Sobre Nosotros</a></li>
+          <li><a href="portafolio.html" style="color: var(--text-muted);">Portafolio</a></li>
+          <li><a href="blog.html" style="color: var(--text-muted);">Blog</a></li>
+          <li><a href="contacto.html" style="color: var(--text-muted);">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="color: var(--text-main); margin-bottom: 1rem;">Contacto</h4>
+        <ul class="flex flex-col gap-1">
+          <li style="color: var(--text-muted);">contacto@clouddec.site</li>
+          <li style="color: var(--text-muted);">+57 301 331 8447</li>
+          <li style="color: var(--text-muted);">Colombia, Bogotá D.C.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container flex justify-between items-center footer-bottom" style="border-top: 1px solid var(--border-color); padding-top: 2rem;">
+      <p style="margin-bottom: 0;">© 2026 Clouddec. Todos los derechos reservados.</p>
+      <div class="flex gap-2">
+        <a href="privacidad.html" style="color: var(--text-muted); font-size: 0.9rem;">Política de Privacidad</a>
+        <span style="color: var(--text-muted);">|</span>
+        <a href="terminos.html" style="color: var(--text-muted); font-size: 0.9rem;">Términos de Servicio</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/573013318447?text=Hola%20equipo%20de%20Clouddec,%20estoy%20interesado%20en%20sus%20servicios%20y%20me%20gustaría%20solicitar%20una%20reunión." class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+</body>
+</html>

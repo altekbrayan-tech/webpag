@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cotización - Clouddec | Get a Quote for Software Development</title>
+  <link rel="icon" href="../public/logo.png" type="image/png">
+  <meta name="description" content="Obtén una cotización personalizada para tus proyectos de desarrollo web, apps móviles y soluciones IT. Get a free quote for custom software.">
+  <meta name="keywords" content="Cotización, Quote, Clouddec, Desarrollo de software, Software Development, Apps Móviles, Mobile Apps, Presupuesto IT">
+  <meta name="author" content="Clouddec">
+  <meta property="og:title" content="Cotización - Clouddec">
+  <meta property="og:description" content="Solicita una propuesta a la medida para el crecimiento tecnológico de tu empresa.">
+  <meta property="og:type" content="website">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar glass-panel">
+    <div class="flex justify-between items-center">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="logo-container">
+          <img src="../public/logo.png" alt="Clouddec Logo" style="width: 100%; height: 100%; object-fit: contain;">
+        </div>
+        <span class="logo-text">CLOUDDEC</span>
+      </a>
+
+      <div class="desktop-menu flex items-center">
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="portafolio.html">Portafolio</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="cotizacion.html" class="active">Cotización</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <a href="cotizacion.html" class="btn btn-primary">Comenzar Proyecto</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="animate-fade-in" style="padding-top: 2rem;">
+    <section class="container section">
+      <div class="text-center mb-4 text-center">
+        <span class="badge">Cotización Automática</span>
+        <h1>Solicitar <span style="color: var(--accent);">Cotización</span></h1>
+        <p style="max-width: 800px; margin: 0 auto; font-size: 1.2rem;">
+          Obtén una propuesta personalizada para tu proyecto. Completa el formulario y nos contactaremos.
+        </p>
+      </div>
+
+      <div class="glass-panel" style="padding: 3rem; max-width: 700px; margin: 0 auto;">
+          <div id="successMessage" class="text-center" style="padding: 3rem 0; display: none;">
+             <div style="width: 80px; height: 80px; background: rgba(0, 210, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; color: var(--accent); font-size: 2rem;">
+                ✓
+             </div>
+             <h2 style="margin-bottom: 1rem;">¡Solicitud Enviada!</h2>
+             <p style="font-size: 1.1rem;">Tus datos han sido registrados correctamente en nuestra base. Un asesor evaluará tu requerimiento y se pondrá en contacto contigo muy pronto.</p>
+             <button onclick="resetForm()" class="btn btn-outline" style="margin-top: 2rem;">Nueva cotización</button>
+          </div>
+          
+          <form id="cotizacionForm" onsubmit="submitForm(event)">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label">Nombre Completo</label>
+                <input type="text" name="nombre" class="form-input" required placeholder="Juan Pérez" />
+              </div>
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label">Correo Electrónico</label>
+                <input type="email" name="email" class="form-input" required placeholder="juan@empresa.com" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 mt-4">
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label">Empresa (Opcional)</label>
+                <input type="text" name="empresa" class="form-input" placeholder="Tu Empresa S.A." />
+              </div>
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label">Servicio de Interés</label>
+                <select name="servicio" class="form-select" required>
+                  <option>Desarrollo de Software</option>
+                  <option>Aplicación Web/Móvil</option>
+                  <option>Servicios IT & Infraestructura</option>
+                  <option>Ciberseguridad</option>
+                  <option>Soporte Técnico</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group mt-4">
+              <label class="form-label">Rango Presupuestario Estimado (USD)</label>
+              <select name="presupuesto" class="form-select">
+                <option>No definido aún</option>
+                <option>$1,000 - $5,000</option>
+                <option>$5,000 - $10,000</option>
+                <option>$10,000 - $25,000</option>
+                <option>Más de $25,000</option>
+              </select>
+            </div>
+
+            <div class="form-group mt-4">
+              <label class="form-label">Detalles del Proyecto</label>
+              <textarea name="detalles" class="form-textarea" required rows="5" placeholder="Cuéntanos un poco más sobre los objetivos y alcance de tu proyecto..."></textarea>
+            </div>
+            
+            <div id="errorMessage" style="color: #ff5e62; margin-bottom: 1rem; padding: 1rem; background: rgba(255, 0, 0, 0.1); border-radius: 8px; display: none;">
+              Hubo un error al enviar el formulario. Inténtalo más tarde.
+            </div>
+
+            <button type="submit" id="submitBtn" class="btn btn-primary mt-4" style="width: 100%; font-size: 1.1rem; padding: 1rem;">
+              Solicitar Cotización
+            </button>
+          </form>
+          
+      </div>
+    </section>
+  </div>
+
+  <script>
+    function submitForm(event) {
+      event.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      btn.innerText = 'Procesando...';
+      btn.disabled = true;
+      document.getElementById('errorMessage').style.display = 'none';
+
+      // Construir FormData
+      const formData = new FormData(event.target);
+      const params = new URLSearchParams();
+      formData.forEach((value, key) => {
+         params.append(key, value);
+      });
+
+      // El webhook de Google Script debería ir aquí
+      const scriptUrl = "https://script.google.com/macros/s/AKfycbxRWmqZc1IZ4Z8hpUQ4n_e7kzqCrYx3hJz8JcFxH2H5KFK-9G9-8k56T4CVnZtrTgdl/exec"; 
+      
+      if (!scriptUrl) {
+         console.warn("No webhook URL configured. Simulating success.");
+         setTimeout(() => {
+           document.getElementById('cotizacionForm').style.display = 'none';
+           document.getElementById('successMessage').style.display = 'block';
+         }, 1000);
+         return;
+      }
+
+      fetch(scriptUrl, {
+        method: 'POST',
+        body: params,
+        mode: 'no-cors'
+      })
+      .then(() => {
+         document.getElementById('cotizacionForm').style.display = 'none';
+         document.getElementById('successMessage').style.display = 'block';
+      })
+      .catch((err) => {
+         console.error(err);
+         document.getElementById('errorMessage').style.display = 'block';
+         btn.innerText = 'Solicitar Cotización';
+         btn.disabled = false;
+      });
+    }
+
+    function resetForm() {
+      document.getElementById('cotizacionForm').reset();
+      document.getElementById('cotizacionForm').style.display = 'block';
+      document.getElementById('successMessage').style.display = 'none';
+      const btn = document.getElementById('submitBtn');
+      btn.innerText = 'Solicitar Cotización';
+      btn.disabled = false;
+    }
+  </script>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container grid grid-cols-4" style="margin-bottom: 3rem;">
+      <div style="grid-column: span 1;" class="footer-brand">
+        <a href="index.html" class="flex items-center gap-2 mb-2">
+          <div style="position: relative; width: 30px; height: 30px;">
+            <img src="../public/logo.png" alt="Clouddec Logo" style="width: 100%; height: 100%; object-fit: contain;">
+          </div>
+          <span style="font-size: 1.2rem; font-weight: 700;">CLOUDDEC</span>
+        </a>
+        <p>Transformamos ideas en soluciones tecnológicas. Desarrollo de software y soluciones IT para empresas.</p>
+      </div>
+
+      <div>
+        <h4 style="color: var(--text-main); margin-bottom: 1rem;">Servicios</h4>
+        <ul class="flex flex-col gap-1">
+          <li><a href="servicios.html#desarrollo" style="color: var(--text-muted);">Desarrollo de Software</a></li>
+          <li><a href="servicios.html#it" style="color: var(--text-muted);">Soluciones IT</a></li>
+          <li><a href="servicios.html#soporte" style="color: var(--text-muted);">Soporte Técnico</a></li>
+          <li><a href="servicios.html#admin" style="color: var(--text-muted);">Administración de Sistemas</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="color: var(--text-main); margin-bottom: 1rem;">Empresa</h4>
+        <ul class="flex flex-col gap-1">
+          <li><a href="nosotros.html" style="color: var(--text-muted);">Sobre Nosotros</a></li>
+          <li><a href="portafolio.html" style="color: var(--text-muted);">Portafolio</a></li>
+          <li><a href="blog.html" style="color: var(--text-muted);">Blog</a></li>
+          <li><a href="contacto.html" style="color: var(--text-muted);">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="color: var(--text-main); margin-bottom: 1rem;">Contacto</h4>
+        <ul class="flex flex-col gap-1">
+          <li style="color: var(--text-muted);">contacto@clouddec.site</li>
+          <li style="color: var(--text-muted);">+57 301 331 8447</li>
+          <li style="color: var(--text-muted);">Colombia, Bogotá D.C.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container flex justify-between items-center footer-bottom" style="border-top: 1px solid var(--border-color); padding-top: 2rem;">
+      <p style="margin-bottom: 0;">© 2026 Clouddec. Todos los derechos reservados.</p>
+      <div class="flex gap-2">
+        <a href="privacidad.html" style="color: var(--text-muted); font-size: 0.9rem;">Política de Privacidad</a>
+        <span style="color: var(--text-muted);">|</span>
+        <a href="terminos.html" style="color: var(--text-muted); font-size: 0.9rem;">Términos de Servicio</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/573013318447?text=Hola%20equipo%20de%20Clouddec,%20estoy%20interesado%20en%20sus%20servicios%20y%20me%20gustaría%20solicitar%20una%20reunión." class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+</body>
+</html>

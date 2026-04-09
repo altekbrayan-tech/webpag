@@ -1,4 +1,4 @@
-FROM nginx:alpine
+FROM traefik:alpine
 
 # Reemplazar la configuración por defecto de Nginx para escuchar en 9443
 COPY default.conf /etc/nginx/conf.d/default.conf

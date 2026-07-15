@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabaja con Nosotros - Clouddec | Únete a Nuestro Equipo de IA & Cloud</title>
+  <link rel="icon" href="../public/logo.png" type="image/png">
+  <meta name="description"
+    content="¿Eres apasionado por la IA, n8n, la infraestructura cloud o el desarrollo fullstack? Conoce nuestras vacantes y únete al equipo de Clouddec.">
+  <meta name="keywords"
+    content="Trabajo, Vacantes, Carreras, Careers, Clouddec, Desarrollador IA, Ingeniero de Prompt, Cloud DevOps, n8n, Trabajo remoto">
+  <meta name="author" content="Clouddec">
+  <meta property="og:title" content="Trabaja con Nosotros - Clouddec">
+  <meta property="og:description" content="Únete a nuestro equipo y lidera proyectos de IA, automatización y cloud.">
+  <meta property="og:type" content="website">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="css/style.css?v=2.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar glass-panel">
+    <div class="flex justify-between items-center">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="logo-container">
+          <img src="../public/logo.png" alt="Clouddec Logo" style="width: 100%; height: 100%; object-fit: contain;">
+        </div>
+        <span class="logo-text">CLOUDDEC</span>
+      </a>
+
+      <div class="desktop-menu flex items-center">
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="portafolio.html">Portafolio</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="cotizacion.html">Cotización</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="cotizacion.html" class="btn btn-primary header-cta">Comenzar Proyecto</a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="portafolio.html">Portafolio</a>
+      <a href="blog.html">Blog</a>
+      <a href="cotizacion.html">Cotización</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="cotizacion.html" style="color: var(--accent); font-weight: bold; border-bottom: none;">Comenzar Proyecto
+        →</a>
+    </div>
+  </nav>
+
+  <script>
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (hamburgerBtn && mobileMenu) {
+      hamburgerBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+        const icon = hamburgerBtn.querySelector('i');
+        if (mobileMenu.classList.contains('active')) {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-xmark');
+        } else {
+          icon.classList.remove('fa-xmark');
+          icon.classList.add('fa-bars');
+        }
+      });
+    }
+  </script>
+
+  <!-- Main Content -->
+  <div class="animate-fade-in" style="padding-top: 2rem;">
+    
+    <!-- Hero Section -->
+    <section class="container section">
+      <div class="text-center mb-4">
+        <span class="badge">Carreras</span>
+        <h1>Trabaja con <span style="color: var(--accent);">Nosotros</span></h1>
+        <p style="max-width: 800px; margin: 0 auto; font-size: 1.2rem;">
+          Construye el futuro de la Inteligencia Artificial, las Automatizaciones y el ecosistema Cloud con un equipo global y remoto.
+        </p>
+      </div>
+
+      <!-- Vacancies list -->
+      <div class="grid grid-cols-2 gap-4 mt-4">
+        
+        <!-- Job Card 1 -->
+        <div class="card glass-panel" style="padding: 2.5rem; display: flex; flex-direction: column;">
+          <div class="flex justify-between items-start mb-2">
+            <span class="badge" style="margin: 0; background: rgba(0, 210, 255, 0.15);">Full-Time | Remoto</span>
+            <span style="color: var(--accent); font-weight: bold;">IA & Data</span>
+          </div>
+          <h3 style="margin-top: 0.5rem;">Ingeniero de Agentes de IA</h3>
+          <p style="flex: 1;">
+            Buscamos un especialista en el desarrollo e integración de LLMs para crear asistentes de IA y agentes de soporte autónomos que interactúen con bases de conocimiento complejas.
+          </p>
+          <div style="border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1rem;">
+            <p style="font-size: 0.85rem; margin-bottom: 0.2rem;"><strong>Requisitos:</strong> LangChain/LlamaIndex, APIs de OpenAI/Anthropic, Python, bases de datos vectoriales (Pinecone/ChromaDB).</p>
+          </div>
+          <a href="#applyFormSection" onclick="selectRole('Ingeniero de Agentes de IA')" class="btn btn-outline mt-4" style="width: 100%;">Postularse</a>
+        </div>
+
+        <!-- Job Card 2 -->
+        <div class="card glass-panel" style="padding: 2.5rem; display: flex; flex-direction: column;">
+          <div class="flex justify-between items-start mb-2">
+            <span class="badge" style="margin: 0; background: rgba(0, 210, 255, 0.15);">Full-Time | Remoto</span>
+            <span style="color: var(--accent); font-weight: bold;">Automatizaciones</span>
+          </div>
+          <h3 style="margin-top: 0.5rem;">Especialista en Automatizaciones</h3>
+          <p style="flex: 1;">
+            Diseñarás e implementarás flujos de trabajo automatizados para conectar CRMs, ERPs, y bases de datos, eliminando procesos repetitivos para nuestros clientes empresariales.
+          </p>
+          <div style="border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1rem;">
+            <p style="font-size: 0.85rem; margin-bottom: 0.2rem;"><strong>Requisitos:</strong> Dominio avanzado de n8n, Make, JavaScript/Node.js, manejo avanzado de Webhooks y APIs REST.</p>
+          </div>
+          <a href="#applyFormSection" onclick="selectRole('Especialista en Automatizaciones')" class="btn btn-outline mt-4" style="width: 100%;">Postularse</a>
+        </div>
+
+        <!-- Job Card 3 -->
+        <div class="card glass-panel" style="padding: 2.5rem; display: flex; flex-direction: column;">
+          <div class="flex justify-between items-start mb-2">
+            <span class="badge" style="margin: 0; background: rgba(0, 210, 255, 0.15);">Full-Time | Remoto</span>
+            <span style="color: var(--accent); font-weight: bold;">Cloud & IaC</span>
+          </div>
+          <h3 style="margin-top: 0.5rem;">Arquitecto DevOps / Cloud</h3>
+          <p style="flex: 1;">
+            Serás responsable de desplegar, asegurar y monitorear la infraestructura cloud de nuestros clientes utilizando automatizaciones y herramientas de infraestructura como código (IaC).
+          </p>
+          <div style="border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1rem;">
+            <p style="font-size: 0.85rem; margin-bottom: 0.2rem;"><strong>Requisitos:</strong> Terraform, AWS/GCP, Docker, Kubernetes, Configuración de pipelines CI/CD y nociones de DevSecOps.</p>
+          </div>
+          <a href="#applyFormSection" onclick="selectRole('Arquitecto DevOps / Cloud')" class="btn btn-outline mt-4" style="width: 100%;">Postularse</a>
+        </div>
+
+        <!-- Job Card 4 -->
+        <div class="card glass-panel" style="padding: 2.5rem; display: flex; flex-direction: column;">
+          <div class="flex justify-between items-start mb-2">
+            <span class="badge" style="margin: 0; background: rgba(0, 210, 255, 0.15);">Full-Time | Remoto</span>
+            <span style="color: var(--accent); font-weight: bold;">Software Engineering</span>
+          </div>
+          <h3 style="margin-top: 0.5rem;">Desarrollador Fullstack</h3>
+          <p style="flex: 1;">
+            Trabajarás en el desarrollo y mantenimiento de aplicaciones web a medida y plataformas SaaS robustas, asegurando un frontend interactivo y un backend eficiente.
+          </p>
+          <div style="border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1rem;">
+            <p style="font-size: 0.85rem; margin-bottom: 0.2rem;"><strong>Requisitos:</strong> React, Next.js, Node.js (TypeScript), PostgreSQL, y experiencia diseñando e integrando APIs.</p>
+          </div>
+          <a href="#applyFormSection" onclick="selectRole('Desarrollador Fullstack')" class="btn btn-outline mt-4" style="width: 100%;">Postularse</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Application Form Section -->
+    <section class="section" id="applyFormSection" style="background-color: var(--secondary-bg);">
+      <div class="container" style="max-width: 750px;">
+        <div class="text-center mb-4">
+          <span class="badge">Aplica Hoy</span>
+          <h2>Envía tu Postulación</h2>
+          <p>Completa el formulario a continuación y adjunta el enlace a tu currículum o perfil profesional.</p>
+        </div>
+
+        <div class="glass-panel" style="padding: 3rem;">
+          
+          <div id="successMessage" class="text-center" style="padding: 2rem 0; display: none;">
+            <div
+              style="width: 80px; height: 80px; background: rgba(0, 210, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; color: var(--accent); font-size: 2rem;">
+              ✓
+            </div>
+            <h2>¡Postulación Recibida!</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+              Muchas gracias por tu interés en unirte a Clouddec. Hemos registrado tus datos correctamente en nuestra base de talentos.
+            </p>
+            <p style="color: var(--text-muted);">
+              Nuestro equipo de selección revisará tu perfil y se pondrá en contacto contigo si tu perfil se alinea con lo que estamos buscando.
+            </p>
+            <button onclick="resetForm()" class="btn btn-outline" style="margin-top: 2rem;">Enviar otra postulación</button>
+          </div>
+
+          <form id="applyForm" onsubmit="submitForm(event)">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label">Nombre Completo</label>
+                <input type="text" name="nombre" class="form-input" required placeholder="Ej. Ana María" />
+              </div>
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label">Correo Electrónico</label>
+                <input type="email" name="email" class="form-input" required placeholder="tu@correo.com" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 mt-4">
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label">Teléfono / WhatsApp</label>
+                <input type="text" name="telefono" class="form-input" required placeholder="Ej. +57 300 123 4567" />
+              </div>
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label">Puesto de Interés</label>
+                <select name="puesto" id="puestoSelect" class="form-select" required>
+                  <option value="">Selecciona una vacante...</option>
+                  <option value="Ingeniero de Agentes de IA">Ingeniero de Agentes de IA</option>
+                  <option value="Especialista en Automatizaciones">Especialista en Automatizaciones</option>
+                  <option value="Arquitecto DevOps / Cloud">Arquitecto DevOps / Cloud</option>
+                  <option value="Desarrollador Fullstack">Desarrollador Fullstack</option>
+                  <option value="Otra vacante / Postulación Espontánea">Otra vacante / Candidatura General</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group mt-4">
+              <label class="form-label">Enlace a CV o LinkedIn (Google Drive, Dropbox, etc.)</label>
+              <input type="url" name="cv_link" class="form-input" required placeholder="https://linkedin.com/in/tu-perfil o link de Drive" />
+            </div>
+
+            <div class="form-group mt-4">
+              <label class="form-label">Cuéntanos sobre ti y tu experiencia con IA / Cloud</label>
+              <textarea name="presentacion" class="form-textarea" required rows="5"
+                placeholder="Describe brevemente tus proyectos destacados, qué tecnologías te apasionan y por qué quieres formar parte de nuestro equipo..."></textarea>
+            </div>
+
+            <div id="errorMessage"
+              style="color: #ff5e62; margin-bottom: 1rem; padding: 1rem; background: rgba(255, 0, 0, 0.1); border-radius: 8px; display: none;">
+              Hubo un error al procesar tu postulación. Por favor, inténtalo nuevamente más tarde.
+            </div>
+
+            <button type="submit" id="submitBtn" class="btn btn-primary mt-4" style="width: 100%; font-size: 1.1rem; padding: 1rem;">
+              Enviar Postulación
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    function selectRole(roleName) {
+      const select = document.getElementById('puestoSelect');
+      if (select) {
+        select.value = roleName;
+      }
+    }
+
+    function submitForm(event) {
+      event.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      btn.innerText = 'Enviando postulación...';
+      btn.disabled = true;
+      document.getElementById('errorMessage').style.display = 'none';
+
+      // Construir FormData
+      const formData = new FormData(event.target);
+      const params = new URLSearchParams();
+      formData.forEach((value, key) => {
+        params.append(key, value);
+      });
+
+      // Usar un scriptUrl simulado o el mismo webhook configurado para postulaciones
+      const scriptUrl = "https://script.google.com/macros/s/AKfycbzhrvB_M4GBmFo97YpIizrF1W7u1Z_jMOor-sBQHdjS7NFcYTYrDcrRARuHm2lZ4wJo/exec";
+
+      fetch(scriptUrl, {
+        method: 'POST',
+        body: params,
+        mode: 'no-cors'
+      })
+      .then(() => {
+        document.getElementById('applyForm').style.display = 'none';
+        document.getElementById('successMessage').style.display = 'block';
+      })
+      .catch((err) => {
+        console.error(err);
+        document.getElementById('errorMessage').style.display = 'block';
+        btn.innerText = 'Enviar Postulación';
+        btn.disabled = false;
+      });
+    }
+
+    function resetForm() {
+      document.getElementById('applyForm').reset();
+      document.getElementById('applyForm').style.display = 'block';
+      document.getElementById('successMessage').style.display = 'none';
+      const btn = document.getElementById('submitBtn');
+      btn.innerText = 'Enviar Postulación';
+      btn.disabled = false;
+    }
+  </script>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container grid grid-cols-4" style="margin-bottom: 3rem;">
+      <div style="grid-column: span 1;" class="footer-brand">
+        <a href="index.html" class="flex items-center gap-2 mb-2">
+          <div style="position: relative; width: 30px; height: 30px;">
+            <img src="../public/logo.png" alt="Clouddec Logo" style="width: 100%; height: 100%; object-fit: contain;">
+          </div>
+          <span style="font-size: 1.2rem; font-weight: 700;">CLOUDDEC</span>
+        </a>
+        <p>Transformamos ideas en soluciones tecnológicas. Desarrollo de software y soluciones IT para empresas.</p>
+      </div>
+
+      <div>
+        <h4 style="color: var(--text-main); margin-bottom: 1rem;">Servicios</h4>
+        <ul class="flex flex-col gap-1">
+          <li><a href="servicios.html#agentes-ia" style="color: var(--text-muted);">Agentes de IA</a></li>
+          <li><a href="servicios.html#automatizaciones" style="color: var(--text-muted);">Automatizaciones</a></li>
+          <li><a href="servicios.html#infraestructura-ia" style="color: var(--text-muted);">Infraestructura con IA</a></li>
+          <li><a href="servicios.html#desarrollo" style="color: var(--text-muted);">Desarrollo de Software</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="color: var(--text-main); margin-bottom: 1rem;">Empresa</h4>
+        <ul class="flex flex-col gap-1">
+          <li><a href="nosotros.html" style="color: var(--text-muted);">Sobre Nosotros</a></li>
+          <li><a href="portafolio.html" style="color: var(--text-muted);">Portafolio</a></li>
+          <li><a href="blog.html" style="color: var(--text-muted);">Blog</a></li>
+          <li><a href="trabaja-con-nosotros.html" style="color: var(--text-muted);">Trabaja con Nosotros</a></li>
+          <li><a href="contacto.html" style="color: var(--text-muted);">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="color: var(--text-main); margin-bottom: 1rem;">Contacto</h4>
+        <ul class="flex flex-col gap-1">
+          <li style="color: var(--text-muted);">contacto@clouddec.com</li>
+          <li style="color: var(--text-muted);">+57 301 945 4222</li>
+          <li style="color: var(--text-muted);">Colombia, Bogotá D.C.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container flex justify-between items-center footer-bottom"
+      style="border-top: 1px solid var(--border-color); padding-top: 2rem;">
+      <p style="margin-bottom: 0;">© 2026 Clouddec. Todos los derechos reservados.</p>
+      <div class="flex gap-2">
+        <a href="privacidad.html" style="color: var(--text-muted); font-size: 0.9rem;">Política de Privacidad</a>
+        <span style="color: var(--text-muted);">|</span>
+        <a href="terminos.html" style="color: var(--text-muted); font-size: 0.9rem;">Términos de Servicio</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/573019454222?text=Hola%20equipo%20de%20Clouddec,%20estoy%20interesado%20en%20sus%20servicios%20y%20me%20gustaría%20solicitar%20una%20reunión."
+    class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+</body>
+
+</html>

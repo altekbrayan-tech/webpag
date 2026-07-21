@@ -1,10 +1,20 @@
 version: '3.8'
+
 services:
   web:
     build: .
+    restart: unless-stopped
     networks:
       - dokploy-network
-    restart: unless-stopped
+    labels:
+      - "traefik.enable=true"
+      # Asigna el router para tu dominio
+      - "traefik.http.routers.mi-web.rule=Host(`web.clouddec.com`)"
+      - "traefik.http.routers.mi-web.entrypoints=websecure"
+      - "traefik.http.routers.mi-web.tls.certresolver=letsencrypt"
+      # FORZAR EL PUERTO INTERNO: Evita que Traefik pierda la ruta tras reconexiones
+      - "traefik.http.services.mi-web.loadbalancer.server.port=80"
+
 networks:
   dokploy-network:
     external: true

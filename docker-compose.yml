@@ -1,10 +1,10 @@
 version: '3.8'
 services:
-  web: 
-    restart: unless-stopped
+  web:
     build: .
     networks:
       - dokploy-network
+    restart: unless-stopped
 networks:
   dokploy-network:
     external: true

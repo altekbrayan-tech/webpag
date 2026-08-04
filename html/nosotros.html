@@ -16,7 +16,7 @@
     content="Más de 15 años liderando proyectos de transformación digital y desarrollo de software.">
   <meta property="og:type" content="website">
   <meta name="robots" content="index, follow">
-  <link rel="stylesheet" href="css/style.css?v=2.0">
+  <link rel="stylesheet" href="css/style.css?v=3.0">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -65,24 +65,6 @@
     </div>
   </nav>
 
-  <script>
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    if (hamburgerBtn && mobileMenu) {
-      hamburgerBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('active');
-        const icon = hamburgerBtn.querySelector('i');
-        if (mobileMenu.classList.contains('active')) {
-          icon.classList.remove('fa-bars');
-          icon.classList.add('fa-xmark');
-        } else {
-          icon.classList.remove('fa-xmark');
-          icon.classList.add('fa-bars');
-        }
-      });
-    }
-  </script>
-
   <!-- Main Content -->
   <div class="animate-fade-in" style="padding-top: 2rem;">
     <section class="container section">
@@ -119,17 +101,17 @@
         </div>
         <div class="grid grid-cols-2 gap-2 text-center">
           <div class="card glass-panel flex flex-col items-center justify-center gap-1">
-            <div class="icon">🎯</div>
+            <div class="icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></div>
             <h4 style="margin: 1rem 0 0.5rem;">Misión</h4>
             <p style="font-size: 0.9rem;">Proporcionar soluciones tecnológicas que impulsen el crecimiento.</p>
           </div>
           <div class="card glass-panel flex flex-col items-center justify-center gap-1">
-            <div class="icon">👁️</div>
+            <div class="icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></div>
             <h4 style="margin: 1rem 0 0.5rem;">Visión</h4>
             <p style="font-size: 0.9rem;">Ser la empresa líder en soluciones IT en Latinoamérica.</p>
           </div>
           <div class="card glass-panel flex flex-col items-center justify-center gap-1" style="grid-column: span 2;">
-            <div class="icon">❤️</div>
+            <div class="icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 00-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 000-7.8z"></path></svg></div>
             <h4 style="margin: 1rem 0 0.5rem;">Valores</h4>
             <p style="font-size: 0.9rem;">Compromiso, transparencia, innovación y orientación al cliente.</p>
           </div>
@@ -155,7 +137,7 @@
         </div>
         <div class="flex justify-center">
           <div class="glass-panel text-center" style="padding: 3rem; width: 100%; max-width: 450px;">
-            <div class="icon" style="margin: 0 auto 1.5rem;">🚀</div>
+            <div class="icon" style="margin: 0 auto 1.5rem;"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 00-2.91-.09z"></path><path d="M12 15l-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg></div>
             <h3>Nuestra Cultura</h3>
             <ul style="text-align: left; margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.8rem;">
               <li style="color: var(--text-muted);"><span style="color: var(--accent); margin-right: 0.5rem;">✔</span> Trabajo hibrido</li>
@@ -282,6 +264,7 @@
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
+  <script src="js/main.js"></script>
 </body>
 
 </html>

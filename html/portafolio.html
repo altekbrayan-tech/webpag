@@ -15,7 +15,7 @@
   <meta property="og:description" content="Soluciones efectivas entregadas a empresas líderes.">
   <meta property="og:type" content="website">
   <meta name="robots" content="index, follow">
-  <link rel="stylesheet" href="css/style.css?v=2.0">
+  <link rel="stylesheet" href="css/style.css?v=3.0">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -63,24 +63,6 @@
         →</a>
     </div>
   </nav>
-
-  <script>
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    if (hamburgerBtn && mobileMenu) {
-      hamburgerBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('active');
-        const icon = hamburgerBtn.querySelector('i');
-        if (mobileMenu.classList.contains('active')) {
-          icon.classList.remove('fa-bars');
-          icon.classList.add('fa-xmark');
-        } else {
-          icon.classList.remove('fa-xmark');
-          icon.classList.add('fa-bars');
-        }
-      });
-    }
-  </script>
 
   <!-- Main Content -->
   <div class="animate-fade-in" style="padding-top: 2rem;">
@@ -276,6 +258,7 @@
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
+  <script src="js/main.js"></script>
 </body>
 
 </html>

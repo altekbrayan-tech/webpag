@@ -16,7 +16,7 @@
     content="Solicita una propuesta a la medida para el crecimiento tecnológico de tu empresa.">
   <meta property="og:type" content="website">
   <meta name="robots" content="index, follow">
-  <link rel="stylesheet" href="css/style.css?v=2.0">
+  <link rel="stylesheet" href="css/style.css?v=3.0">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -65,24 +65,6 @@
     </div>
   </nav>
 
-  <script>
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    if (hamburgerBtn && mobileMenu) {
-      hamburgerBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('active');
-        const icon = hamburgerBtn.querySelector('i');
-        if (mobileMenu.classList.contains('active')) {
-          icon.classList.remove('fa-bars');
-          icon.classList.add('fa-xmark');
-        } else {
-          icon.classList.remove('fa-xmark');
-          icon.classList.add('fa-bars');
-        }
-      });
-    }
-  </script>
-
   <!-- Main Content -->
   <div class="animate-fade-in" style="padding-top: 2rem;">
     <section class="container section">
@@ -103,10 +85,11 @@
           <h2 style="margin-bottom: 1rem;">¡Solicitud Enviada!</h2>
           <p style="font-size: 1.1rem;">Tus datos han sido registrados correctamente en nuestra base. Un asesor evaluará
             tu requerimiento y se pondrá en contacto contigo muy pronto.</p>
-          <button onclick="resetForm()" class="btn btn-outline" style="margin-top: 2rem;">Nueva cotización</button>
+          <button onclick="resetForm('cotizacionForm','submitBtn','successMessage','Solicitar Cotización GRATUITA')" class="btn btn-outline" style="margin-top: 2rem;">Nueva cotización</button>
         </div>
 
-        <form id="cotizacionForm" onsubmit="submitForm(event)">
+        <form id="cotizacionForm">
+          <input type="text" name="_hp" class="form-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="grid grid-cols-2 gap-4">
             <div class="form-group" style="margin: 0;">
               <label class="form-label">Nombre Completo</label>
@@ -169,60 +152,6 @@
     </section>
   </div>
 
-  <script>
-    function submitForm(event) {
-      event.preventDefault();
-      const btn = document.getElementById('submitBtn');
-      btn.innerText = 'Procesando...';
-      btn.disabled = true;
-      document.getElementById('errorMessage').style.display = 'none';
-
-      // Construir FormData
-      const formData = new FormData(event.target);
-      const params = new URLSearchParams();
-      formData.forEach((value, key) => {
-        params.append(key, value);
-      });
-
-      // El webhook de Google Script debería ir aquí
-      const scriptUrl = "https://script.google.com/macros/s/AKfycbzhrvB_M4GBmFo97YpIizrF1W7u1Z_jMOor-sBQHdjS7NFcYTYrDcrRARuHm2lZ4wJo/exec";
-
-      if (!scriptUrl) {
-        console.warn("No webhook URL configured. Simulating success.");
-        setTimeout(() => {
-          document.getElementById('cotizacionForm').style.display = 'none';
-          document.getElementById('successMessage').style.display = 'block';
-        }, 1000);
-        return;
-      }
-
-      fetch(scriptUrl, {
-        method: 'POST',
-        body: params,
-        mode: 'no-cors'
-      })
-        .then(() => {
-          document.getElementById('cotizacionForm').style.display = 'none';
-          document.getElementById('successMessage').style.display = 'block';
-        })
-        .catch((err) => {
-          console.error(err);
-          document.getElementById('errorMessage').style.display = 'block';
-          btn.innerText = 'Solicitar Cotización';
-          btn.disabled = false;
-        });
-    }
-
-    function resetForm() {
-      document.getElementById('cotizacionForm').reset();
-      document.getElementById('cotizacionForm').style.display = 'block';
-      document.getElementById('successMessage').style.display = 'none';
-      const btn = document.getElementById('submitBtn');
-      btn.innerText = 'Solicitar Cotización';
-      btn.disabled = false;
-    }
-  </script>
-
   <!-- Footer -->
   <footer class="footer">
     <div class="container grid grid-cols-4" style="margin-bottom: 3rem;">
@@ -284,6 +213,10 @@
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
+  <script src="js/main.js"></script>
+  <script>
+    submitFormTo('/api/cotizacion', 'cotizacionForm', 'submitBtn', 'successMessage', 'errorMessage', 'Solicitar Cotización GRATUITA');
+  </script>
 </body>
 
 </html>

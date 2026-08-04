@@ -16,7 +16,7 @@
     content="Transformamos ideas en soluciones tecnológicas y desarrollo de software avanzado.">
   <meta property="og:type" content="website">
   <meta name="robots" content="index, follow">
-  <link rel="stylesheet" href="css/style.css?v=2.0">
+  <link rel="stylesheet" href="css/style.css?v=3.0">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <meta name="description"
@@ -95,24 +95,6 @@
     </div>
   </nav>
 
-  <script>
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    if (hamburgerBtn && mobileMenu) {
-      hamburgerBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('active');
-        const icon = hamburgerBtn.querySelector('i');
-        if (mobileMenu.classList.contains('active')) {
-          icon.classList.remove('fa-bars');
-          icon.classList.add('fa-xmark');
-        } else {
-          icon.classList.remove('fa-xmark');
-          icon.classList.add('fa-bars');
-        }
-      });
-    }
-  </script>
-
   <!-- Main Content -->
   <div class="animate-fade-in">
 
@@ -170,30 +152,6 @@
       </div>
     </section>
 
-    <!-- <section id="contacto" style="padding: 60px 20px; background-color: #f4f7f6;">
-      <div style="max-width: 600px; margin: 0 auto; text-align: center;">
-        <h2 style="color: #2c3e50;">¿Listo para automatizar su crecimiento?</h2>
-        <p>Solicite una consultoría técnica de 15 minutos sin costo.</p>
-
-        <form action="TU_WEBHOOK_DE_N8N" method="POST"
-          style="display: flex; flex-direction: column; gap: 15px; margin-top: 30px;">
-          <input type="text" name="nombre" placeholder="Nombre completo" required
-            style="padding: 12px; border-radius: 5px; border: 1px solid #ddd;">
-          <input type="email" name="email" placeholder="Correo corporativo" required
-            style="padding: 12px; border-radius: 5px; border: 1px solid #ddd;">
-          <select name="servicio" style="padding: 12px; border-radius: 5px; border: 1px solid #ddd;">
-            <option value="automatizacion">Automatización (n8n)</option>
-            <option value="cloud">Infraestructura Cloud</option>
-            <option value="seguridad">Ciberseguridad</option>
-          </select>
-          <button type="submit"
-            style="padding: 15px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">
-            ENVIAR SOLICITUD
-          </button>
-        </form>
-      </div>
-    </section> -->
-
     <!-- Services Section -->
     <section class="section" style="background-color: var(--secondary-bg);">
       <div class="container">
@@ -202,34 +160,34 @@
           <p>Ofrecemos soluciones avanzadas de Inteligencia Artificial, Automatización e Infraestructura Cloud.</p>
         </div>
 
-        <div class="grid grid-cols-3">
-          <div class="card glass-panel">
-            <div class="icon">🤖</div>
+        <div class="grid bento-grid">
+          <div class="card glass-panel bento-wide">
+            <div class="icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"></path></svg></div>
             <h3>Agentes de IA</h3>
             <p>Agentes y asistentes especializados a medida con LLMs integrados (OpenAI, Anthropic) para soporte y análisis.</p>
           </div>
           <div class="card glass-panel">
-            <div class="icon">🔄</div>
+            <div class="icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6"></path><path d="M1 20v-6h6"></path><path d="M3.51 9a9 9 0 0114.13-3.36L23 10M1 14l5.36 4.36A9 9 0 0020.49 15"></path></svg></div>
             <h3>Automatizaciones</h3>
             <p>Diseño y optimización de flujos de trabajo con n8n y Make para reducir costos operativos y trabajo manual.</p>
           </div>
           <div class="card glass-panel">
-            <div class="icon">⚡</div>
+            <div class="icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div>
             <h3>Infraestructura con IA</h3>
             <p>Despliegues automatizados de infraestructura cloud (IaC) en AWS/Azure y optimización inteligente de recursos.</p>
           </div>
           <div class="card glass-panel">
-            <div class="icon">&lt;/&gt;</div>
+            <div class="icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></div>
             <h3>Desarrollo Web</h3>
             <p>Aplicaciones y plataformas web modernas, rápidas y totalmente escalables.</p>
           </div>
           <div class="card glass-panel">
-            <div class="icon">🛡️</div>
+            <div class="icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
             <h3>Ciberseguridad</h3>
             <p>Protección integral para tus datos, sistemas críticos y auditorías de seguridad completas.</p>
           </div>
           <div class="card glass-panel">
-            <div class="icon">☁️</div>
+            <div class="icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"></path></svg></div>
             <h3>Cloud & Soporte</h3>
             <p>Migración cloud robusta y asistencia técnica 24/7 para garantizar alta disponibilidad.</p>
           </div>
@@ -368,22 +326,6 @@
       </div>
     </section>
 
-    <script>
-      // FAQ Accordion Logic
-      document.querySelectorAll('.faq-question').forEach(button => {
-        button.addEventListener('click', () => {
-          const item = button.parentElement;
-          const isActive = item.classList.contains('active');
-
-          document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
-
-          if (!isActive) {
-            item.classList.add('active');
-          }
-        });
-      });
-    </script>
-
   </div>
 
   <!-- Footer -->
@@ -447,6 +389,7 @@
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
+  <script src="js/main.js"></script>
 </body>
 
 </html>

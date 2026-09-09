@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clouddec - Transformamos tu negocio con tecnología | Custom Software & IT</title>
   <link rel="icon" href="../public/logo.png" type="image/png">
-  <meta name="description"
-    content="Clouddec es una empresa líder en desarrollo de software (Software Development), ciberseguridad, soluciones en la nube (Cloud IT) y transformación digital. Agiliza tu negocio.">
+  <link rel="canonical" href="https://web.clouddec.com/">
   <meta name="keywords"
     content="Desarrollo de software, Software Development, Consultoría TI, IT Consulting, Ciberseguridad, Cybersecurity, Desarrollo Web, Web Development, Apps Móviles, Mobile Apps, Cloud Services, Servicios en la nube">
   <meta name="author" content="Clouddec">
@@ -15,6 +14,7 @@
   <meta property="og:description"
     content="Transformamos ideas en soluciones tecnológicas y desarrollo de software avanzado.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://web.clouddec.com/">
   <meta name="robots" content="index, follow">
   <link rel="stylesheet" href="css/style.css?v=3.0">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -26,26 +26,36 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ITUtility",
-    "name": "Clouddec",
-    "url": "https://web.clouddec.site/",
-    "logo": "https://web.clouddec.site/public/logo.png",
-    "description": "Empresa líder en desarrollo de software a la medida, ciberseguridad, consultoría IT y servicios cloud.",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+57 301 331 8447",
-      "contactType": "customer service",
-      "email": "contacto@clouddec.site",
-      "areaServed": "CO",
-      "availableLanguage": ["es", "en"]
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Bogotá D.C.",
-      "addressCountry": "CO"
-    },
-    "sameAs": [
-      "https://clouddec.site"
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://web.clouddec.com/#organization",
+        "name": "Clouddec",
+        "url": "https://web.clouddec.com/",
+        "logo": "https://web.clouddec.com/public/logo.png",
+        "description": "Empresa líder en desarrollo de software a la medida, ciberseguridad, consultoría IT y servicios cloud.",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+57 301 945 4222",
+          "contactType": "customer service",
+          "email": "contacto@clouddec.cloud",
+          "areaServed": "CO",
+          "availableLanguage": ["es"]
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bogotá D.C.",
+          "addressCountry": "CO"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://web.clouddec.com/#website",
+        "name": "Clouddec",
+        "url": "https://web.clouddec.com/",
+        "inLanguage": "es",
+        "publisher": { "@id": "https://web.clouddec.com/#organization" }
+      }
     ]
   }
   </script>
@@ -125,7 +135,7 @@
         <div class="flex justify-center">
           <div class="glass-panel"
             style="width: 100%; max-width: 500px; aspect-ratio: 4/3; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 0;">
-            <img src="../public/office.png" alt="Clouddec IT Office"
+            <img src="../public/office.png" alt="Clouddec IT Office" width="1024" height="1024"
               style="width: 100%; height: 100%; object-fit: cover;">
             <div
               style="position: absolute; inset: 0; background: linear-gradient(to top right, rgba(7, 11, 20, 0.8), transparent);">
@@ -365,7 +375,7 @@
       <div>
         <h4 style="color: var(--text-main); margin-bottom: 1rem;">Contacto</h4>
         <ul class="flex flex-col gap-1">
-          <li style="color: var(--text-muted);">contacto@clouddec.com</li>
+          <li style="color: var(--text-muted);">contacto@clouddec.cloud</li>
           <li style="color: var(--text-muted);">+57 301 945 4222</li>
           <li style="color: var(--text-muted);">Colombia, Bogotá D.C.</li>
         </ul>

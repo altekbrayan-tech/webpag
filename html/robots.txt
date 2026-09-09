@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://web.clouddec.site/sitemap.xml
+Sitemap: https://web.clouddec.com/sitemap.xml

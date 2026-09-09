@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://web.clouddec.site/</loc>
+    <loc>https://web.clouddec.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://web.clouddec.site/index.html</loc>
+    <loc>https://web.clouddec.com/index.html</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://web.clouddec.site/servicios.html</loc>
+    <loc>https://web.clouddec.com/servicios.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://web.clouddec.site/cotizacion.html</loc>
+    <loc>https://web.clouddec.com/cotizacion.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://web.clouddec.site/nosotros.html</loc>
+    <loc>https://web.clouddec.com/nosotros.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://web.clouddec.site/portafolio.html</loc>
+    <loc>https://web.clouddec.com/portafolio.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://web.clouddec.site/contacto.html</loc>
+    <loc>https://web.clouddec.com/contacto.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://web.clouddec.site/blog.html</loc>
+    <loc>https://web.clouddec.com/blog.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://web.clouddec.site/trabaja-con-nosotros.html</loc>
+    <loc>https://web.clouddec.com/trabaja-con-nosotros.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://web.clouddec.site/privacidad.html</loc>
+    <loc>https://web.clouddec.com/privacidad.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://web.clouddec.site/terminos.html</loc>
+    <loc>https://web.clouddec.com/terminos.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

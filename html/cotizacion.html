@@ -19,7 +19,7 @@
   <meta property="og:url" content="https://web.clouddec.com/cotizacion.html">
   <meta name="robots" content="index, follow">
   <link rel="stylesheet" href="css/style.css?v=3.0">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script type="application/ld+json">
   {
@@ -51,6 +51,7 @@
           <li><a href="index.html">Inicio</a></li>
           <li><a href="nosotros.html">Nosotros</a></li>
           <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="marketing.html">Marketing</a></li>
           <li><a href="portafolio.html">Portafolio</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="cotizacion.html" class="active">Cotización</a></li>
@@ -69,6 +70,7 @@
       <a href="index.html">Inicio</a>
       <a href="nosotros.html">Nosotros</a>
       <a href="servicios.html">Servicios</a>
+      <a href="marketing.html">Marketing</a>
       <a href="portafolio.html">Portafolio</a>
       <a href="blog.html">Blog</a>
       <a href="cotizacion.html">Cotización</a>
@@ -122,12 +124,22 @@
             <div class="form-group" style="margin: 0;">
               <label class="form-label">Servicio de Interés</label>
               <select name="servicio" class="form-select" required>
-                <option>Agentes de IA Especializados</option>
-                <option>Automatizaciones Inteligentes (n8n/Make)</option>
-                <option>Despliegue de Infraestructura con IA</option>
-                <option>Desarrollo de Software</option>
-                <option>Ciberseguridad & DevSecOps</option>
-                <option>Servicios Cloud & DevOps</option>
+                <optgroup label="Tecnología">
+                  <option>Agentes de IA Especializados</option>
+                  <option>Automatizaciones Inteligentes (n8n/Make)</option>
+                  <option>Despliegue de Infraestructura con IA</option>
+                  <option>Desarrollo de Software</option>
+                  <option>Ciberseguridad & DevSecOps</option>
+                  <option>Servicios Cloud & DevOps</option>
+                </optgroup>
+                <optgroup label="Marketing Digital">
+                  <option>Gestión de Redes Sociales</option>
+                  <option>Publicidad Digital (Meta/Google Ads)</option>
+                  <option>Automatización de Marketing</option>
+                  <option>SEO & Posicionamiento</option>
+                  <option>Branding & Identidad Visual</option>
+                  <option>Email Marketing & CRM</option>
+                </optgroup>
                 <option>Otro</option>
               </select>
             </div>
@@ -181,6 +193,7 @@
       <div>
         <h4 style="color: var(--text-main); margin-bottom: 1rem;">Servicios</h4>
         <ul class="flex flex-col gap-1">
+          <li><a href="marketing.html" style="color: var(--text-muted);">Marketing Digital</a></li>
           <li><a href="servicios.html#desarrollo" style="color: var(--text-muted);">Desarrollo de Software</a></li>
           <li><a href="servicios.html#it" style="color: var(--text-muted);">Soluciones IT</a></li>
           <li><a href="servicios.html#soporte" style="color: var(--text-muted);">Soporte Técnico</a></li>

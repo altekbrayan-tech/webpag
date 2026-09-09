@@ -17,7 +17,15 @@
   --glass-bg: rgba(255, 255, 255, 0.04);
   --glass-border: rgba(255, 255, 255, 0.08);
 
-  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  /* Niveles de superficie para dar más profundidad a tarjetas anidadas */
+  --surface-1: rgba(255, 255, 255, 0.02);
+  --surface-2: rgba(255, 255, 255, 0.05);
+  --surface-3: rgba(255, 255, 255, 0.09);
+
+  /* Pareja tipográfica "Tech Startup": Space Grotesk (headings) + DM Sans (body) */
+  --font-heading: 'Space Grotesk', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-body: 'DM Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-family: var(--font-body);
   --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   --radius-sm: 10px;
   --radius-md: 18px;
@@ -97,7 +105,7 @@ ul { list-style: none; }
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.15; letter-spacing: -0.01em; margin-bottom: 1rem; }
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 700; line-height: 1.15; letter-spacing: -0.01em; margin-bottom: 1rem; }
 h1 {
   font-size: clamp(2.4rem, 4.5vw, 3.75rem);
   background: var(--accent-gradient);
@@ -314,3 +322,64 @@ p { color: var(--text-muted); margin-bottom: 1rem; }
   display: flex; align-items: center; justify-content: center; flex-shrink: 0;
   box-shadow: 0 6px 18px -6px rgba(139, 92, 246, 0.6);
 }
+
+/* Trust stats — bloque de cifras bajo un único <h2> real (nunca números como heading suelto) */
+.stats-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+@media (min-width: 768px) { .stats-row { grid-template-columns: repeat(4, 1fr); } }
+.stat-item { text-align: center; padding: 1.5rem 1rem; }
+.stat-value {
+  font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 700;
+  background: var(--accent-gradient); -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; line-height: 1.1; display: block;
+}
+.stat-label { color: var(--text-muted); font-size: 0.9rem; margin-top: 0.4rem; }
+
+/* Carrusel de testimonios accesible: pausa en hover/focus, controles de teclado,
+   estado final estático bajo prefers-reduced-motion */
+.testimonial-carousel { position: relative; }
+.testimonial-viewport { overflow: hidden; }
+.testimonial-track { display: flex; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+.testimonial-slide { flex: 0 0 100%; padding: 0 0.5rem; }
+.testimonial-slide .testimonial-card { max-width: 700px; margin: 0 auto; }
+.carousel-controls { display: flex; justify-content: center; align-items: center; gap: 1.5rem; margin-top: 2rem; }
+.carousel-btn {
+  width: 44px; height: 44px; border-radius: 50%; background: var(--glass-bg);
+  border: 1px solid var(--glass-border); color: var(--text-main); cursor: pointer;
+  display: flex; align-items: center; justify-content: center; transition: var(--transition);
+  flex-shrink: 0;
+}
+.carousel-btn:hover { border-color: var(--accent-2); color: var(--accent-2); }
+.carousel-dots { display: flex; gap: 0.5rem; align-items: center; }
+.carousel-dot {
+  width: 8px; height: 8px; border-radius: 50%; background: var(--border-color); cursor: pointer;
+  padding: 0; border: none; transition: var(--transition);
+}
+.carousel-dot.active { background: var(--accent-2); width: 24px; border-radius: 4px; }
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-track { transition: none; }
+}
+
+/* Pricing cards — paquetes sugeridos que enlazan al flujo de cotización, sin precios fijos */
+.pricing-card { padding: 2.25rem 2rem; text-align: center; position: relative; display: flex; flex-direction: column; }
+.pricing-card.featured { border-color: rgba(139, 92, 246, 0.5); box-shadow: 0 20px 55px -22px rgba(139, 92, 246, 0.55); }
+.pricing-card .badge-featured {
+  position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+  background: var(--accent-gradient); color: #fff; padding: 0.35rem 1.1rem; border-radius: 20px;
+  font-size: 0.75rem; font-weight: 700; white-space: nowrap;
+}
+.pricing-name { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.4rem; }
+.pricing-tagline { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+.pricing-features { text-align: left; margin: 0 0 1.5rem; flex: 1; }
+.pricing-features li { display: flex; align-items: flex-start; gap: 0.6rem; margin-bottom: 0.85rem; font-size: 0.92rem; color: var(--text-main); }
+.pricing-features li i { color: var(--accent-2); margin-top: 0.25rem; flex-shrink: 0; }
+
+/* Filtro de categorías (Portafolio) */
+.filter-bar { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.5rem; }
+.filter-btn {
+  padding: 0.6rem 1.4rem; border-radius: 20px; border: 1px solid var(--border-color);
+  background: transparent; color: var(--text-muted); font-weight: 600; font-size: 0.9rem;
+  cursor: pointer; transition: var(--transition); font-family: inherit;
+}
+.filter-btn:hover { border-color: var(--accent-2); color: var(--text-main); }
+.filter-btn.active { background: var(--accent-gradient); color: #fff; border-color: transparent; }
+[data-portfolio-item][hidden] { display: none; }

@@ -28,6 +28,51 @@
   });
 })();
 
+/**
+ * Carrusel de testimonios: una tarjeta visible a la vez, sin autoplay.
+ * Navegación manual (botones prev/next, focusables por teclado por defecto)
+ * más puntos indicadores; no requiere pausa porque no hay rotación automática.
+ */
+(function testimonialCarousel() {
+  const track = document.querySelector('.testimonial-track');
+  if (!track) return;
+  const slides = track.querySelectorAll('.testimonial-slide');
+  const prevBtn = document.querySelector('[data-carousel-prev]');
+  const nextBtn = document.querySelector('[data-carousel-next]');
+  const dotsContainer = document.querySelector('.carousel-dots');
+  if (!slides.length) return;
+
+  let index = 0;
+
+  function update() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+    if (dotsContainer) {
+      dotsContainer.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+        dot.setAttribute('aria-current', i === index ? 'true' : 'false');
+      });
+    }
+    if (prevBtn) prevBtn.disabled = index === 0;
+    if (nextBtn) nextBtn.disabled = index === slides.length - 1;
+  }
+
+  if (dotsContainer) {
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'carousel-dot';
+      dot.type = 'button';
+      dot.setAttribute('aria-label', `Ir al testimonio ${i + 1} de ${slides.length}`);
+      dot.addEventListener('click', () => { index = i; update(); });
+      dotsContainer.appendChild(dot);
+    });
+  }
+
+  if (prevBtn) prevBtn.addEventListener('click', () => { index = Math.max(0, index - 1); update(); });
+  if (nextBtn) nextBtn.addEventListener('click', () => { index = Math.min(slides.length - 1, index + 1); update(); });
+
+  update();
+})();
+
 (function scrollReveal() {
   const targets = document.querySelectorAll('.card, .faq-item, .testimonial-card, .glass-panel');
   if (!targets.length || !('IntersectionObserver' in window)) return;

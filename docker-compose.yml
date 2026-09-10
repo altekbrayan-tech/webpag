@@ -19,6 +19,11 @@ services:
   api:
     build: ./backend
     restart: unless-stopped
+    # Hostname único para evitar colisión de DNS: `web` está conectado tanto a
+    # `internal` como a `dokploy-network` (compartida con otros stacks), y un
+    # nombre genérico como "api" puede resolver al contenedor de OTRO proyecto
+    # en esa red compartida (mismo motivo por el que `db` ya usa `clouddec-db`).
+    hostname: clouddec-api
     env_file:
       - .env
     environment:
